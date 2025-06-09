@@ -28,6 +28,7 @@ export default function HomePage() {
         setData(result.products)
         setFiltered(result.products)
       } catch (err) {
+        console.error(err) // <- Added to use the variable
         setError('Failed to load products')
       } finally {
         setLoading(false)
